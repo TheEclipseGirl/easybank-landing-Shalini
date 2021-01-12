@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap');
+
+body{
+    background-color:white;
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* Nav Bar */
+
+nav{
+    position: fixed !important;
+    background-color: white;
+    box-shadow: 0 1px 8px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 60px;
+}
+.main-nav-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    /* height: 70px; */
+}
+
+.all-a-tag{
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    justify-content: space-evenly;
+    color: lightgray;
+
+}
+.all-a-tag a{
+    color: #8A8B8E !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.request-invite-btn button{
+    border-radius: 60px;
+    background-image: linear-gradient(to bottom right,#47D06A ,#2CB9CB);
+    border: none;
+    outline: none; 
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.request-invite-btn img{
+    display: none;
+}
+ a:hover{
+    cursor: pointer;
+    text-decoration: none;
+ }
+
+.hamburger-pop-up{
+    align-items: center;
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+
+}
+.hamburger-pop-up a{
+    color: black;
+}
+
+ /* Media Query */
+ @media only screen and (max-width: 860px) {
+    .all-a-tag, .request-invite-btn button{
+        display: none;
+    }
+    .request-invite-btn img{
+        display: block;
+        margin-top: 7px;
+        cursor: pointer;
+    }
+    .hamburger-pop-up{
+        display: flex;
+        flex-direction: column;
+        position: absolute !important;
+        top: 80px;
+        width: 80vw;
+        left: 10vw;
+        background-color: white;
+    }
+}
