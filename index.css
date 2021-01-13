@@ -17,6 +17,16 @@ nav{
     height: 60px;
     z-index: 5;
 }
+
+.nav-links {
+    border-bottom: 5px solid transparent;
+}
+
+.nav-links:hover{
+    border-bottom: 5px solid black;
+    border-image: linear-gradient(to right, #40C886 , #33BDAF);
+    border-image-slice: 1;
+}
 .main-nav-div{
     display: flex;
     flex-direction: row;
@@ -118,6 +128,10 @@ a{
 .card{
     width: 23%;
 }
+.card-text-title:hover{
+    color: #33BDAE;
+    cursor: pointer;
+}
 .card-img{
     height: 215px;
 }
@@ -148,11 +162,29 @@ a{
     color: white;
     font-weight: bold;
 }
+.lg-btn {
+    transition: all 0.2s;
+}
+.lg-btn:hover {
+    background-image: linear-gradient(to right,#81E3A7 ,#80D4E0);
+}
 
 .contact-continer{
     display: flex;
     justify-content: space-between;
     height:170px;
+}
+.para-white p:hover{
+    color: #33BDAE;
+    cursor: pointer;
+}
+.footer-icons i{
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.footer-icons i:hover{
+    color: #33BDAE;
 }
 
  /* Media Query  */
