@@ -3,6 +3,8 @@
 body{
     background-color:white;
     font-family: 'Public Sans', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Nav Bar */
@@ -13,6 +15,7 @@ nav{
     box-shadow: 0 1px 8px 2px rgba(0, 0, 0, 0.1);
     position: relative;
     height: 60px;
+    z-index: 5;
 }
 .main-nav-div{
     display: flex;
@@ -66,7 +69,93 @@ a{
     color: black;
 }
 
- /* Media Query */
+/* Intro */
+.intro-div{
+    display: flex;
+    width: 100vw;
+    height: 85vh;
+    justify-content: flex-end;
+}
+.right-background-img{
+    height: 100%;
+    position: relative;
+}
+.desktop-bg{
+    position: absolute;
+    top: -250px;
+    left: -60;
+}
+.mockup-img{
+    position: absolute;
+    top: -120px;
+    left: 100px;
+}
+.about-right{
+    width: 50%;
+    height:100% ;
+    position: relative;
+}
+
+.about-left{
+    width: 40%;
+}
+.para{
+   color: #95949A;
+}
+.about-left button{
+    border-radius: 60px;
+    background-image: linear-gradient(to bottom right,#47D06A ,#2CB9CB);
+    border: none;
+    outline: none; 
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.mobile-bg{
+    visibility: hidden;
+}
+
+.card{
+    width: 23%;
+}
+.card-img{
+    height: 215px;
+}
+
+
+/* Online banking Icons */
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-img{
+    width: 24%;
+}
+.icon-para{
+    font-size: 1.5rem;
+}
+.para-white{
+    color: white;
+}
+.last-request-invite-btn{
+    border-radius: 60px;
+    background-image: linear-gradient(to bottom right,#47D06A ,#2CB9CB);
+    border: none;
+    outline: none; 
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.contact-continer{
+    display: flex;
+    justify-content: space-between;
+    height:170px;
+}
+
+ /* Media Query  */
  @media only screen and (max-width: 860px) {
     .all-a-tag, .request-invite-btn button{
         display: none;
@@ -84,5 +173,99 @@ a{
         width: 80vw;
         left: 10vw;
         background-color: white;
+    }
+    .intro-div{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .about-right{
+        height:60vh;
+        width: 100vw;
+        margin-bottom: 100px;
+    }
+    .about-left{
+        width: 100vw;
+    }
+    .mockup-img{
+        transform: scale(0.7);
+        left: -10%;
+        top: -300px;
+        z-index: 1;
+    }
+    .desktop-bg{
+        visibility: hidden;
+    }
+    .mobile-bg{
+        visibility: visible;
+        position: absolute;
+        top: -40px;
+        width: 110vw;
+        height: 100%;
+    }
+    .left-intro-text{
+        text-align: center;
+    }
+    .why-choose-easybank-text {
+        text-align: center;
+    }
+    .about-left{
+        padding-bottom: 100px;
+    }
+    .why-choose-easybank-text p{
+        text-align: center;
+        width: 70vw;
+        margin-left: -20px;
+    }
+    
+    .icons{
+        display: flex;
+        flex-direction: column;
+    }
+    .icon-img{
+        width: 100%;
+        text-align: center;
+    }
+   
+   .latest-article{
+        flex-direction: column;
+        width: 100%;;
+   }
+   .latest-article p{
+       text-align: center;
+   }
+   .card-main-div{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       position: relative;
+       top: 0;
+   }
+   .card{
+        position: absolute;
+        top: 0px;
+        padding-left:40%;
+        width: 100%;
+   }
+   .contact{
+       display: flex;
+       flex-direction: column;
+   }
+   .card-img{
+       height: 180px;
+   }
+   .contact-continer{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 640px){
+    .mockup-img{
+        transform: scale(0.4);
+        left: -210px;
+        top: -300px;
+    }
+    .about-right{
+        margin-bottom: 0;
     }
 }
